@@ -221,7 +221,9 @@
             
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="torchtnt.data.html">Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="torchtnt.loggers.html">Loggers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="torchtnt.runner.html">Runner</a></li>
 <li class="toctree-l1"><a class="reference internal" href="torchtnt.utils.html">Utils</a></li>
 </ul>
 
@@ -308,6 +310,8 @@
  | <a href="#J"><strong>J</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
@@ -324,6 +328,8 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="torchtnt.utils.html#torchtnt.utils.all_gather_tensors">all_gather_tensors() (in module torchtnt.utils)</a>
+</li>
+      <li><a href="torchtnt.data.html#torchtnt.data.AllDatasetBatchesIterator">AllDatasetBatchesIterator (class in torchtnt.data)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -379,12 +385,22 @@
 </li>
       <li><a href="torchtnt.loggers.html#torchtnt.loggers.CSVLogger">CSVLogger (class in torchtnt.loggers)</a>
 </li>
+      <li><a href="torchtnt.data.html#torchtnt.data.CudaDataPrefetcher">CudaDataPrefetcher (class in torchtnt.data)</a>
+</li>
   </ul></td>
 </tr></table>
 
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.data.html#torchtnt.data.DataIterationStrategy">DataIterationStrategy (class in torchtnt.data)</a>
+</li>
+      <li><a href="torchtnt.data.html#torchtnt.data.DataIterationStrategyRegistry">DataIterationStrategyRegistry (class in torchtnt.data)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PhaseState.dataloader">dataloader (torchtnt.runner.PhaseState attribute)</a>
+</li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.EarlyStopChecker.divergence_threshold">divergence_threshold (torchtnt.utils.EarlyStopChecker property)</a>
 </li>
   </ul></td>
@@ -394,6 +410,20 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="torchtnt.utils.html#torchtnt.utils.EarlyStopChecker">EarlyStopChecker (class in torchtnt.utils)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.State.entry_point">entry_point (torchtnt.runner.State attribute)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.State.eval_state">eval_state (torchtnt.runner.State attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.EvalUnit.eval_step">eval_step() (torchtnt.runner.EvalUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PhaseState.evaluate_every_n_epochs">evaluate_every_n_epochs (torchtnt.runner.PhaseState attribute)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PhaseState.evaluate_every_n_steps">evaluate_every_n_steps (torchtnt.runner.PhaseState attribute)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.EvalUnit">EvalUnit (class in torchtnt.runner)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -427,6 +457,8 @@
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.data.html#torchtnt.data.DataIterationStrategyRegistry.get">get() (torchtnt.data.DataIterationStrategyRegistry class method)</a>
+</li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.get_device_from_env">get_device_from_env() (in module torchtnt.utils)</a>
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.get_global_rank">get_global_rank() (in module torchtnt.utils)</a>
@@ -437,10 +469,10 @@
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.get_process_group_backend_from_device">get_process_group_backend_from_device() (in module torchtnt.utils)</a>
 </li>
-      <li><a href="torchtnt.utils.html#torchtnt.utils.get_psutil_cpu_stats">get_psutil_cpu_stats() (in module torchtnt.utils)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.utils.html#torchtnt.utils.get_psutil_cpu_stats">get_psutil_cpu_stats() (in module torchtnt.utils)</a>
+</li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.get_python_version">get_python_version() (in module torchtnt.utils)</a>
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.PGWrapper.get_rank">get_rank() (torchtnt.utils.PGWrapper method)</a>
@@ -459,9 +491,15 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.data.html#torchtnt.data.MultiDataloader.ignore_empty_data">ignore_empty_data (torchtnt.data.MultiDataloader attribute)</a>
+</li>
+      <li><a href="torchtnt.data.html#torchtnt.data.MultiDataloader.individual_dataloaders">individual_dataloaders (torchtnt.data.MultiDataloader attribute)</a>
+</li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.init_from_env">init_from_env() (in module torchtnt.utils)</a>
 </li>
       <li><a href="torchtnt.loggers.html#torchtnt.loggers.InMemoryLogger">InMemoryLogger (class in torchtnt.loggers)</a>
+</li>
+      <li><a href="torchtnt.data.html#torchtnt.data.InOrderIterator">InOrderIterator (class in torchtnt.data)</a>
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.RSSProfiler.interval">interval (torchtnt.utils.RSSProfiler attribute)</a>
 </li>
@@ -487,6 +525,10 @@
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.is_windows">is_windows() (in module torchtnt.utils)</a>
 </li>
+      <li><a href="torchtnt.data.html#torchtnt.data.MultiDataloader.iteration_strategy">iteration_strategy (torchtnt.data.MultiDataloader attribute)</a>
+</li>
+      <li><a href="torchtnt.data.html#torchtnt.data.MultiDataloader.iterator_cls">iterator_cls (torchtnt.data.MultiDataloader attribute)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -501,9 +543,11 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="torchtnt.utils.html#torchtnt.utils.EarlyStopChecker.load_state_dict">load_state_dict() (torchtnt.utils.EarlyStopChecker method)</a>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.Progress.load_state_dict">load_state_dict() (torchtnt.runner.Progress method)</a>
 
       <ul>
+        <li><a href="torchtnt.utils.html#torchtnt.utils.EarlyStopChecker.load_state_dict">(torchtnt.utils.EarlyStopChecker method)</a>
+</li>
         <li><a href="torchtnt.utils.html#torchtnt.utils.Timer.load_state_dict">(torchtnt.utils.Timer method)</a>
 </li>
       </ul></li>
@@ -541,6 +585,10 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PhaseState.max_epochs">max_epochs (torchtnt.runner.PhaseState attribute)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PhaseState.max_steps_per_epoch">max_steps_per_epoch (torchtnt.runner.PhaseState attribute)</a>
+</li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.measure_rss_deltas">measure_rss_deltas() (in module torchtnt.utils)</a>
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.GPUStats.memory_free_mb">memory_free_mb (torchtnt.utils.GPUStats attribute)</a>
@@ -549,21 +597,75 @@
 </li>
       <li><a href="torchtnt.loggers.html#torchtnt.loggers.MetricLogger">MetricLogger (class in torchtnt.loggers)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="torchtnt.utils.html#torchtnt.utils.EarlyStopChecker.min_delta">min_delta (torchtnt.utils.EarlyStopChecker property)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="torchtnt.utils.html#torchtnt.utils.EarlyStopChecker.mode">mode (torchtnt.utils.EarlyStopChecker property)</a>
 </li>
       <li>
     module
 
       <ul>
+        <li><a href="torchtnt.data.html#module-torchtnt.data">torchtnt.data</a>
+</li>
         <li><a href="torchtnt.loggers.html#module-torchtnt.loggers">torchtnt.loggers</a>
+</li>
+        <li><a href="torchtnt.runner.html#module-torchtnt.runner">torchtnt.runner</a>
 </li>
         <li><a href="torchtnt.utils.html#module-torchtnt.utils">torchtnt.utils</a>
 </li>
       </ul></li>
+      <li><a href="torchtnt.data.html#torchtnt.data.MultiDataloader">MultiDataloader (class in torchtnt.data)</a>
+</li>
+      <li><a href="torchtnt.data.html#torchtnt.data.MultiIterator">MultiIterator (class in torchtnt.data)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.Progress.num_epochs_completed">num_epochs_completed (torchtnt.runner.Progress attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.Progress.num_steps_completed">num_steps_completed (torchtnt.runner.Progress attribute)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.Progress.num_steps_completed_in_epoch">num_steps_completed_in_epoch (torchtnt.runner.Progress attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.EvalUnit.on_eval_end">on_eval_end() (torchtnt.runner.EvalUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.EvalUnit.on_eval_epoch_end">on_eval_epoch_end() (torchtnt.runner.EvalUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.EvalUnit.on_eval_epoch_start">on_eval_epoch_start() (torchtnt.runner.EvalUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.EvalUnit.on_eval_start">on_eval_start() (torchtnt.runner.EvalUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PredictUnit.on_predict_end">on_predict_end() (torchtnt.runner.PredictUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PredictUnit.on_predict_epoch_end">on_predict_epoch_end() (torchtnt.runner.PredictUnit method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PredictUnit.on_predict_epoch_start">on_predict_epoch_start() (torchtnt.runner.PredictUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PredictUnit.on_predict_start">on_predict_start() (torchtnt.runner.PredictUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.TrainUnit.on_train_end">on_train_end() (torchtnt.runner.TrainUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.TrainUnit.on_train_epoch_end">on_train_epoch_end() (torchtnt.runner.TrainUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.TrainUnit.on_train_epoch_start">on_train_epoch_start() (torchtnt.runner.TrainUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.TrainUnit.on_train_start">on_train_start() (torchtnt.runner.TrainUnit method)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -578,13 +680,25 @@
       </ul></li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.EarlyStopChecker.patience">patience (torchtnt.utils.EarlyStopChecker property)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="torchtnt.utils.html#torchtnt.utils.Timer.paused">paused (torchtnt.utils.Timer property)</a>
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.PGWrapper">PGWrapper (class in torchtnt.utils)</a>
 </li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PhaseState">PhaseState (class in torchtnt.runner)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.State.predict_state">predict_state (torchtnt.runner.State attribute)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PredictUnit.predict_step">predict_step() (torchtnt.runner.PredictUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PredictUnit">PredictUnit (class in torchtnt.runner)</a>
+</li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.RSSProfiler.profile">profile() (torchtnt.utils.RSSProfiler method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.Progress">Progress (class in torchtnt.runner)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PhaseState.progress">progress (torchtnt.runner.PhaseState attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -592,6 +706,8 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.data.html#torchtnt.data.RandomizedBatchSamplerIterator">RandomizedBatchSamplerIterator (class in torchtnt.data)</a>
+</li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.rank_zero_critical">rank_zero_critical() (in module torchtnt.utils)</a>
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.rank_zero_debug">rank_zero_debug() (in module torchtnt.utils)</a>
@@ -602,9 +718,11 @@
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.rank_zero_print">rank_zero_print() (in module torchtnt.utils)</a>
 </li>
+      <li><a href="torchtnt.utils.html#torchtnt.utils.rank_zero_warn">rank_zero_warn() (in module torchtnt.utils)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="torchtnt.utils.html#torchtnt.utils.rank_zero_warn">rank_zero_warn() (in module torchtnt.utils)</a>
+      <li><a href="torchtnt.data.html#torchtnt.data.DataIterationStrategyRegistry.REGISTRY">REGISTRY (torchtnt.data.DataIterationStrategyRegistry attribute)</a>
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.EarlyStopChecker.reset">reset() (torchtnt.utils.EarlyStopChecker method)</a>
 
@@ -614,6 +732,8 @@
         <li><a href="torchtnt.utils.html#torchtnt.utils.Timer.reset">(torchtnt.utils.Timer method)</a>
 </li>
       </ul></li>
+      <li><a href="torchtnt.data.html#torchtnt.data.RoundRobinIterator">RoundRobinIterator (class in torchtnt.data)</a>
+</li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.RSSProfiler.rss_deltas_bytes">rss_deltas_bytes (torchtnt.utils.RSSProfiler attribute)</a>
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.RSSProfiler">RSSProfiler (class in torchtnt.utils)</a>
@@ -630,18 +750,30 @@
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.seed">seed() (in module torchtnt.utils)</a>
 </li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.State.should_stop">should_stop (torchtnt.runner.State property)</a>
+</li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.Timer.start">start() (torchtnt.utils.Timer method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="torchtnt.utils.html#torchtnt.utils.EarlyStopChecker.state_dict">state_dict() (torchtnt.utils.EarlyStopChecker method)</a>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.State">State (class in torchtnt.runner)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.Progress.state_dict">state_dict() (torchtnt.runner.Progress method)</a>
 
       <ul>
+        <li><a href="torchtnt.utils.html#torchtnt.utils.EarlyStopChecker.state_dict">(torchtnt.utils.EarlyStopChecker method)</a>
+</li>
         <li><a href="torchtnt.utils.html#torchtnt.utils.Timer.state_dict">(torchtnt.utils.Timer method)</a>
 </li>
       </ul></li>
-      <li><a href="torchtnt.utils.html#torchtnt.utils.Timer.stop">stop() (torchtnt.utils.Timer method)</a>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.PhaseState.step_output">step_output (torchtnt.runner.PhaseState attribute)</a>
 </li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.State.stop">stop() (torchtnt.runner.State method)</a>
+
+      <ul>
+        <li><a href="torchtnt.utils.html#torchtnt.utils.Timer.stop">(torchtnt.utils.Timer method)</a>
+</li>
+      </ul></li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.EarlyStopChecker.stopping_threshold">stopping_threshold (torchtnt.utils.EarlyStopChecker property)</a>
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.sync_bool">sync_bool() (in module torchtnt.utils)</a>
@@ -662,15 +794,31 @@
 </li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.Timer.time">time() (torchtnt.utils.Timer method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="torchtnt.utils.html#torchtnt.utils.Timer">Timer (class in torchtnt.utils)</a>
 </li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.State.timer">timer (torchtnt.runner.State attribute)</a>
+</li>
+      <li>
+    torchtnt.data
+
+      <ul>
+        <li><a href="torchtnt.data.html#module-torchtnt.data">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     torchtnt.loggers
 
       <ul>
         <li><a href="torchtnt.loggers.html#module-torchtnt.loggers">module</a>
+</li>
+      </ul></li>
+      <li>
+    torchtnt.runner
+
+      <ul>
+        <li><a href="torchtnt.runner.html#module-torchtnt.runner">module</a>
 </li>
       </ul></li>
       <li>
@@ -681,6 +829,12 @@
 </li>
       </ul></li>
       <li><a href="torchtnt.utils.html#torchtnt.utils.Timer.total_time_seconds">total_time_seconds (torchtnt.utils.Timer property)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.State.train_state">train_state (torchtnt.runner.State attribute)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.TrainUnit.train_step">train_step() (torchtnt.runner.TrainUnit method)</a>
+</li>
+      <li><a href="torchtnt.runner.html#torchtnt.runner.TrainUnit">TrainUnit (class in torchtnt.runner)</a>
 </li>
   </ul></td>
 </tr></table>
