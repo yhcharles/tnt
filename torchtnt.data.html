@@ -433,12 +433,12 @@ Repetition is supported.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="torchtnt.data.MultiDataloader">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torchtnt.data.</span></span><span class="sig-name descname"><span class="pre">MultiDataloader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">individual_dataloaders</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">DataLoader</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iteration_strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#torchtnt.data.DataIterationStrategy" title="torchtnt.data.DataIterationStrategy"><span class="pre">DataIterationStrategy</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterator_cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#torchtnt.data.MultiIterator" title="torchtnt.data.MultiIterator"><span class="pre">MultiIterator</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_empty_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchtnt.data.MultiDataloader" title="Permalink to this definition">¶</a></dt>
-<dd><p>MultiDataloader cycles through individual dataloaders passed to it.</p>
+<dt class="sig sig-object py" id="torchtnt.data.MultiDataLoader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torchtnt.data.</span></span><span class="sig-name descname"><span class="pre">MultiDataLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">individual_dataloaders</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">DataLoader</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iteration_strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#torchtnt.data.DataIterationStrategy" title="torchtnt.data.DataIterationStrategy"><span class="pre">DataIterationStrategy</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterator_cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#torchtnt.data.MultiIterator" title="torchtnt.data.MultiIterator"><span class="pre">MultiIterator</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_empty_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchtnt.data.MultiDataLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>MultiDataLoader cycles through individual dataloaders passed to it.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="torchtnt.data.MultiDataloader.individual_dataloaders">
-<span class="sig-name descname"><span class="pre">individual_dataloaders</span></span><a class="headerlink" href="#torchtnt.data.MultiDataloader.individual_dataloaders" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="torchtnt.data.MultiDataLoader.individual_dataloaders">
+<span class="sig-name descname"><span class="pre">individual_dataloaders</span></span><a class="headerlink" href="#torchtnt.data.MultiDataLoader.individual_dataloaders" title="Permalink to this definition">¶</a></dt>
 <dd><p>A dictionary of DataLoaders or Iterables with dataloader name as key</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -453,8 +453,8 @@ Repetition is supported.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="torchtnt.data.MultiDataloader.iteration_strategy">
-<span class="sig-name descname"><span class="pre">iteration_strategy</span></span><a class="headerlink" href="#torchtnt.data.MultiDataloader.iteration_strategy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="torchtnt.data.MultiDataLoader.iteration_strategy">
+<span class="sig-name descname"><span class="pre">iteration_strategy</span></span><a class="headerlink" href="#torchtnt.data.MultiDataLoader.iteration_strategy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A dataclass indicating how the dataloaders are iterated over.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -464,8 +464,8 @@ Repetition is supported.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="torchtnt.data.MultiDataloader.iterator_cls">
-<span class="sig-name descname"><span class="pre">iterator_cls</span></span><a class="headerlink" href="#torchtnt.data.MultiDataloader.iterator_cls" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="torchtnt.data.MultiDataLoader.iterator_cls">
+<span class="sig-name descname"><span class="pre">iterator_cls</span></span><a class="headerlink" href="#torchtnt.data.MultiDataLoader.iterator_cls" title="Permalink to this definition">¶</a></dt>
 <dd><p>A subclass of MultiIterator defining iteration logic. This is the type, not an object instance</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -475,8 +475,8 @@ Repetition is supported.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="torchtnt.data.MultiDataloader.ignore_empty_data">
-<span class="sig-name descname"><span class="pre">ignore_empty_data</span></span><a class="headerlink" href="#torchtnt.data.MultiDataloader.ignore_empty_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="torchtnt.data.MultiDataLoader.ignore_empty_data">
+<span class="sig-name descname"><span class="pre">ignore_empty_data</span></span><a class="headerlink" href="#torchtnt.data.MultiDataLoader.ignore_empty_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>skip dataloaders which contain no data. It’s False by default, and an exception is raised.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -647,11 +647,11 @@ has been exhausted</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#torchtnt.data.InOrderIterator"><code class="docutils literal notranslate"><span class="pre">InOrderIterator</span></code></a></li>
-<li><a class="reference internal" href="#torchtnt.data.MultiDataloader"><code class="docutils literal notranslate"><span class="pre">MultiDataloader</span></code></a><ul>
-<li><a class="reference internal" href="#torchtnt.data.MultiDataloader.individual_dataloaders"><code class="docutils literal notranslate"><span class="pre">MultiDataloader.individual_dataloaders</span></code></a></li>
-<li><a class="reference internal" href="#torchtnt.data.MultiDataloader.iteration_strategy"><code class="docutils literal notranslate"><span class="pre">MultiDataloader.iteration_strategy</span></code></a></li>
-<li><a class="reference internal" href="#torchtnt.data.MultiDataloader.iterator_cls"><code class="docutils literal notranslate"><span class="pre">MultiDataloader.iterator_cls</span></code></a></li>
-<li><a class="reference internal" href="#torchtnt.data.MultiDataloader.ignore_empty_data"><code class="docutils literal notranslate"><span class="pre">MultiDataloader.ignore_empty_data</span></code></a></li>
+<li><a class="reference internal" href="#torchtnt.data.MultiDataLoader"><code class="docutils literal notranslate"><span class="pre">MultiDataLoader</span></code></a><ul>
+<li><a class="reference internal" href="#torchtnt.data.MultiDataLoader.individual_dataloaders"><code class="docutils literal notranslate"><span class="pre">MultiDataLoader.individual_dataloaders</span></code></a></li>
+<li><a class="reference internal" href="#torchtnt.data.MultiDataLoader.iteration_strategy"><code class="docutils literal notranslate"><span class="pre">MultiDataLoader.iteration_strategy</span></code></a></li>
+<li><a class="reference internal" href="#torchtnt.data.MultiDataLoader.iterator_cls"><code class="docutils literal notranslate"><span class="pre">MultiDataLoader.iterator_cls</span></code></a></li>
+<li><a class="reference internal" href="#torchtnt.data.MultiDataLoader.ignore_empty_data"><code class="docutils literal notranslate"><span class="pre">MultiDataLoader.ignore_empty_data</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#torchtnt.data.MultiIterator"><code class="docutils literal notranslate"><span class="pre">MultiIterator</span></code></a></li>
