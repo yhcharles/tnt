@@ -411,25 +411,35 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="torchtnt.runner.Progress">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torchtnt.runner.</span></span><span class="sig-name descname"><span class="pre">Progress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_epochs_completed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps_completed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps_completed_in_epoch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchtnt.runner.Progress" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use a dataclass for typed access to fields and to add state_dict/load_state_dict for convenience for checkpointing.</p>
+<dd><p>Class to track progress during the loop. Includes state_dict/load_state_dict for convenience for checkpointing.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="torchtnt.runner.Progress.increment_epoch">
+<span class="sig-name descname"><span class="pre">increment_epoch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#torchtnt.runner.Progress.increment_epoch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchtnt.runner.Progress.increment_step">
+<span class="sig-name descname"><span class="pre">increment_step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#torchtnt.runner.Progress.increment_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="torchtnt.runner.Progress.load_state_dict">
 <span class="sig-name descname"><span class="pre">load_state_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#torchtnt.runner.Progress.load_state_dict" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py attribute">
+<dl class="py property">
 <dt class="sig sig-object py" id="torchtnt.runner.Progress.num_epochs_completed">
-<span class="sig-name descname"><span class="pre">num_epochs_completed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#torchtnt.runner.Progress.num_epochs_completed" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_epochs_completed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#torchtnt.runner.Progress.num_epochs_completed" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py attribute">
+<dl class="py property">
 <dt class="sig sig-object py" id="torchtnt.runner.Progress.num_steps_completed">
-<span class="sig-name descname"><span class="pre">num_steps_completed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#torchtnt.runner.Progress.num_steps_completed" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_steps_completed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#torchtnt.runner.Progress.num_steps_completed" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py attribute">
+<dl class="py property">
 <dt class="sig sig-object py" id="torchtnt.runner.Progress.num_steps_completed_in_epoch">
-<span class="sig-name descname"><span class="pre">num_steps_completed_in_epoch</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#torchtnt.runner.Progress.num_steps_completed_in_epoch" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_steps_completed_in_epoch</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#torchtnt.runner.Progress.num_steps_completed_in_epoch" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -588,6 +598,8 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#torchtnt.runner.Progress"><code class="docutils literal notranslate"><span class="pre">Progress</span></code></a><ul>
+<li><a class="reference internal" href="#torchtnt.runner.Progress.increment_epoch"><code class="docutils literal notranslate"><span class="pre">Progress.increment_epoch()</span></code></a></li>
+<li><a class="reference internal" href="#torchtnt.runner.Progress.increment_step"><code class="docutils literal notranslate"><span class="pre">Progress.increment_step()</span></code></a></li>
 <li><a class="reference internal" href="#torchtnt.runner.Progress.load_state_dict"><code class="docutils literal notranslate"><span class="pre">Progress.load_state_dict()</span></code></a></li>
 <li><a class="reference internal" href="#torchtnt.runner.Progress.num_epochs_completed"><code class="docutils literal notranslate"><span class="pre">Progress.num_epochs_completed</span></code></a></li>
 <li><a class="reference internal" href="#torchtnt.runner.Progress.num_steps_completed"><code class="docutils literal notranslate"><span class="pre">Progress.num_steps_completed</span></code></a></li>
