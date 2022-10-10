@@ -700,6 +700,12 @@ to be made available by the program launcher for setting the appropriate device 
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="torchtnt.utils.get_filesystem">
+<span class="sig-prename descclassname"><span class="pre">torchtnt.utils.</span></span><span class="sig-name descname"><span class="pre">get_filesystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AbstractFileSystem</span></span></span><a class="headerlink" href="#torchtnt.utils.get_filesystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the appropriate filesystem to use when handling the given path.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="torchtnt.utils.get_global_rank">
 <span class="sig-prename descclassname"><span class="pre">torchtnt.utils.</span></span><span class="sig-name descname"><span class="pre">get_global_rank</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#torchtnt.utils.get_global_rank" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get rank using torch.distributed if available. Otherwise, the RANK env var instead if initialized.
@@ -1126,6 +1132,7 @@ For more details, see <a class="reference external" href="https://pytorch.org/do
 <li><a class="reference internal" href="#torchtnt.utils.copy_data_to_device"><code class="docutils literal notranslate"><span class="pre">copy_data_to_device()</span></code></a></li>
 <li><a class="reference internal" href="#torchtnt.utils.days_to_secs"><code class="docutils literal notranslate"><span class="pre">days_to_secs()</span></code></a></li>
 <li><a class="reference internal" href="#torchtnt.utils.get_device_from_env"><code class="docutils literal notranslate"><span class="pre">get_device_from_env()</span></code></a></li>
+<li><a class="reference internal" href="#torchtnt.utils.get_filesystem"><code class="docutils literal notranslate"><span class="pre">get_filesystem()</span></code></a></li>
 <li><a class="reference internal" href="#torchtnt.utils.get_global_rank"><code class="docutils literal notranslate"><span class="pre">get_global_rank()</span></code></a></li>
 <li><a class="reference internal" href="#torchtnt.utils.get_nvidia_smi_gpu_stats"><code class="docutils literal notranslate"><span class="pre">get_nvidia_smi_gpu_stats()</span></code></a></li>
 <li><a class="reference internal" href="#torchtnt.utils.get_pet_launch_config"><code class="docutils literal notranslate"><span class="pre">get_pet_launch_config()</span></code></a></li>
